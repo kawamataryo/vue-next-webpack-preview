@@ -4,10 +4,10 @@
   <button @click="inc">Clicked {{ count }} times.</button>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script lang="ts">
+import { ref, defineComponent } from 'vue'
 
-export default {
+export default defineComponent({
   setup() {
     const count = ref(0)
     const inc = () => {
@@ -19,14 +19,14 @@ export default {
       inc
     }
   }
-}
+})
 </script>
 
 <style scoped>
-img {
-  width: 200px;
-}
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-}
+  img {
+    width: 200px;
+  }
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
 </style>
